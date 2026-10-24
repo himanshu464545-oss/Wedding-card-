@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#003b2b">
+  <title>Islamic Nikah Card | Arya Wedding Card</title>
+  <link rel="stylesheet" href="islamic-card.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="index.html">← Arya Wedding Card</a>
+    <button type="button" onclick="window.print()">Save / Download PDF</button>
+  </header>
+
+  <main class="layout">
+
+    <section class="form-panel">
+      <h2>Create Islamic Nikah Card</h2>
+      <p>Enter the details and tap Update Invitation.</p>
+
+      <label for="bride">Bride's Name</label>
+      <input id="bride" placeholder="Bride's name">
+
+      <label for="groom">Groom's Name</label>
+      <input id="groom" placeholder="Groom's name">
+
+      <label for="date">Nikah Date</label>
+      <input id="date" type="date">
+
+      <label for="time">Nikah Time</label>
+      <input id="time" type="time">
+
+      <label for="venue">Venue</label>
+      <input id="venue" placeholder="Wedding venue">
+
+      <label for="city">City</label>
+      <input id="city" placeholder="City name">
+
+      <label for="message">Invitation Message</label>
+      <textarea id="message" rows="3">Together with our families, we invite you to join us in celebrating our Nikah.</textarea>
+
+      <button id="updateBtn" type="button">Update Invitation ✨</button>
+      <button class="print-btn" type="button" onclick="window.print()">Save / Download PDF</button>
+    </section>
+
+    <section class="preview-area">
+      <article class="islamic-card">
+        <div class="card-content">
+
+          <p class="bismillah" lang="ar" dir="rtl">
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </p>
+
+          <p class="eyebrow">WITH THE BLESSINGS OF ALLAH</p>
+          <div class="ornament">✦ ❈ ✦</div>
+
+          <h2 class="card-heading">Nikah Invitation</h2>
+
+          <p class="intro">Together with our families,<br>
+            we joyfully invite you to celebrate the Nikah of</p>
+
+          <div class="couple-names">
+            <h1 id="showBride">Bride's Name</h1>
+            <p class="connector">with</p>
+            <h1 id="showGroom">Groom's Name</h1>
+          </div>
+
+          <div class="gold-divider">❈ ━━━━━━━━━ ❈</div>
+
+          <div class="details-panel">
+            <p class="detail">
+              <span>DATE</span>
+              <strong id="showDate">Nikah Date</strong>
+            </p>
+            <p class="detail">
+              <span>TIME</span>
+              <strong id="showTime">Nikah Time</strong>
+            </p>
+            <p class="detail">
+              <span>VENUE</span>
+              <strong id="showVenue">Wedding Venue</strong>
+            </p>
+            <p class="detail">
+              <span>CITY</span>
+              <strong id="showCity">City</strong>
+            </p>
+          </div>
+
+          <p class="card-message" id="showMessage">
+            Together with our families, we invite you to join us in celebrating our Nikah.
+          </p>
+
+          <div class="bottom-ornament">☾ ✦ ❈ ✦ ☽</div>
+          <p class="dua">May Allah bless this union with love, mercy and barakah.</p>
+
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <script src="islamic-card.js"></script>
+</body>
+</html>
