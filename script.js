@@ -20,20 +20,25 @@ if (startBtn) {
   });
 }
 
-// =================================
+
+ // =================================
 // PREMIUM CARD BUTTONS
 // =================================
 
-let premiumButtons = document.querySelectorAll(".premium-btn");
+document.addEventListener("click", function (event) {
+  const button = event.target.closest(".premium-btn");
 
-premiumButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    let template = button.getAttribute("data-template");
+  if (!button) return;
 
-    if (template === "islamic") {
-      window.location.href = "islamic-card.html";
-    } else {
-      window.location.href = "creator.html?template=" + template;
-    }
-  });
+  const template = button.getAttribute("data-template");
+
+  if (template === "islamic") {
+    window.location.href = "islamic-card.html";
+  } else if (
+    template === "royal" ||
+    template === "floral" ||
+    template === "mandap"
+  ) {
+    window.location.href = "creator.html?template=" + template;
+  }
 });
