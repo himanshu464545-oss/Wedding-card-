@@ -1,9 +1,3 @@
-
-/* =========================================
-   ARYA WEDDING CARD
-   ISLAMIC NIKAH — FINAL CSS
-   Emerald Green + Royal Gold
-========================================= */
 :root {
   --green: #003b2c;
   --deep-green: #00251c;
@@ -14,98 +8,78 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
-  min-height: 100vh;
+  margin: 0;
   padding: 16px;
+  background: #fff7ed;
+  color: var(--green);
   font-family: Arial, sans-serif;
-  color: var(--cream);
-  background: radial-gradient(ellipse at top, #14533f, #041c15 75%);
 }
 
 /* TOP BAR */
-
 .topbar {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 22px;
-  padding: 14px 18px;
+  max-width: 1050px;
+  margin: 0 auto 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 12px;
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  background: #002b20;
+  flex-wrap: wrap;
 }
 
 .topbar a {
-  color: var(--light-gold);
-  text-decoration: none;
-  font-weight: bold;
+  color: #5a3476;
+  font-size: 16px;
 }
 
-.topbar button,
-.print-btn {
-  padding: 11px 16px;
-  border: 1px solid var(--gold);
-  border-radius: 30px;
-  background: linear-gradient(135deg, #0b6247, #003b2c);
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: var(--green);
   color: white;
-  font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
 }
 
 /* PAGE LAYOUT */
-
 .layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: minmax(260px, 350px) minmax(0, 600px);
-  justify-content: center;
-  align-items: start;
-  gap: 24px;
 }
 
 /* FORM */
-
 .form-panel {
-  min-width: 0;
-  padding: 22px;
-  border: 1px solid #987d3c;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #073d30, #03291f);
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+  background: #fffaf3;
+  border: 1px solid #ead9ae;
+  border-radius: 14px;
 }
 
-.form-panel h1,
 .form-panel h2 {
-  margin-bottom: 10px;
-  color: var(--light-gold);
-  font: bold 26px/1.3 Georgia, serif;
+  margin: 0 0 10px;
+  color: var(--green);
+  font-size: 26px;
 }
 
 .form-panel > p {
-  margin-bottom: 18px;
-  color: #d7e5da;
-  font-size: 14px;
-  line-height: 1.6;
+  color: #52675e;
+  line-height: 1.5;
 }
 
 .form-panel label {
   display: block;
-  margin: 13px 0 6px;
-  color: var(--light-gold);
-  font-size: 14px;
+  margin: 14px 0 6px;
+  color: var(--green);
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -113,365 +87,313 @@ body {
 .form-panel textarea {
   display: block;
   width: 100%;
-  min-width: 0;
-  padding: 12px;
-  border: 1px solid #719782;
-  border-radius: 8px;
-  outline: none;
-  background: #fffdf6;
-  color: #17392b;
-  font: inherit;
+  max-width: 100%;
+  min-height: 43px;
+  padding: 10px;
+  border: 1px solid #c6b27b;
+  border-radius: 7px;
+  background: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-.form-panel input:focus,
-.form-panel textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px #d8b45c30;
+.form-panel input[type="file"] {
+  padding: 8px;
 }
 
 .form-panel textarea {
-  min-height: 85px;
+  min-height: 95px;
   resize: vertical;
+  line-height: 1.5;
 }
 
-#updateBtn {
-  width: 100%;
-  margin-top: 18px;
-  padding: 14px;
-  border: 1px solid var(--gold);
-  border-radius: 30px;
-  background: linear-gradient(135deg, #bd9134, #ffedb0, #b58b32);
-  color: #173628;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.form-panel .print-btn {
+.form-panel button {
   width: 100%;
   margin-top: 12px;
 }
 
-/* PREVIEW */
-
+/* CARD PREVIEW */
 .preview-area {
   width: 100%;
-  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
 /* ISLAMIC CARD */
-
 .islamic-card {
   position: relative;
   isolation: isolate;
   width: 100%;
-  max-width: 600px;
-  min-width: 0;
-  height: auto;
+  max-width: 520px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0;
   overflow: hidden;
-  border: 5px double var(--gold);
-  border-radius: 13px;
-  background-color: var(--deep-green);
-  background-image:
-    linear-gradient(#00281f18, #00281f18),
-    url("./islamic-bg.png");
-  background-position: center;
+  border: 7px double var(--gold);
+  border-radius: 24px;
+  background-color: var(--green);
+  background-image: url("./islamic-bg.png");
   background-size: 100% 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  color: var(--light-gold);
-  text-align: center;
-  box-shadow:
-    0 0 0 3px #174a35,
-    0 0 0 6px #d8b45c75,
-    0 16px 35px #0005;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
 }
 
-/* INNER FRAME */
-
+/* INNER BORDER */
 .islamic-card::before {
   content: "";
   position: absolute;
-  z-index: 2;
-  inset: 10px;
-  border: 1px solid #f5d782cc;
+  inset: 14px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
   pointer-events: none;
+  z-index: 2;
 }
 
 /* CARD CONTENT */
-
-.islamic-card .card-content {
+.card-content {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
-  padding: 18px 7% 16px;
+  padding: 34px 28px 30px;
   text-align: center;
+  color: var(--light-gold);
   overflow-wrap: anywhere;
-  text-shadow: 0 1px 4px #000a;
+}
+
+/* MOON */
+.moon {
+  color: var(--gold);
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
 /* BISMILLAH */
-
-.islamic-card .bismillah {
-  display: table;
-  max-width: 100%;
-  margin: 3px auto 9px;
-  padding: 3px 8px;
-  border-bottom: 1px solid var(--gold);
-  color: #fff1bd;
-  font-family: serif;
-  font-size: clamp(17px, 3.5vw, 24px);
-  line-height: 1.9;
-  overflow-wrap: anywhere;
+.bismillah {
+  margin: 8px 0 18px;
+  color: var(--light-gold);
+  font-size: 20px;
+  line-height: 1.8;
 }
 
-/* TOP TEXT */
-
-.islamic-card .eyebrow {
-  margin: 7px auto;
-  color: #f5d98d;
-  font-size: clamp(9px, 2.5vw, 12px);
-  font-weight: bold;
+/* EYEBROW */
+.eyebrow {
+  margin: 12px 0;
+  color: var(--light-gold);
+  font-size: 12px;
   letter-spacing: 2px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.islamic-card .ornament {
-  margin: 4px auto;
+/* DECORATION */
+.ornament,
+.gold-divider,
+.bottom-ornament {
   color: var(--gold);
-  font-size: 19px;
-  letter-spacing: 5px;
+  line-height: 1.8;
 }
 
-/* HEADING */
-
-.islamic-card h2.card-heading {
-  margin: 7px auto;
-  color: #fff0b3;
-  font: bold clamp(25px, 5vw, 38px)/1.2 Georgia, serif;
+.ornament {
+  margin: 8px 0;
+  font-size: 17px;
 }
 
-/* INTRO TEXT: HTML USES class="intro" */
+/* MAIN HEADING */
+.card-heading {
+  margin: 10px 0 14px;
+  color: var(--light-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 6vw, 40px);
+  line-height: 1.2;
+}
 
-.islamic-card .intro {
-  width: 100%;
-  max-width: 440px;
-  margin: 5px auto;
-  color: #fff0c4;
-  font: italic 14px/1.4 Georgia, serif;
+/* INTRO */
+.intro {
+  margin: 12px 0 20px;
+  color: var(--light-gold);
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
 }
 
 /* NAMES */
-
-.islamic-card #showBride,
-.islamic-card #showGroom {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 7px auto;
-  color: var(--light-gold);
-  font: bold clamp(25px, 5.5vw, 42px)/1.08 Georgia, serif;
-  overflow-wrap: anywhere;
-  text-shadow: 0 2px 3px #00251b, 0 0 8px #0008;
+.couple-names {
+  margin: 18px 0;
 }
 
-.islamic-card .connector {
-  margin: 3px auto;
-  color: #f0d17a;
-  font: italic 17px Georgia, serif;
+.couple-names h1 {
+  margin: 12px 0;
+  color: var(--light-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 6.5vw, 42px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  text-shadow: 0 1px 3px #00251c;
+}
+
+.connector {
+  margin: 8px 0;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-style: italic;
 }
 
 /* DIVIDER */
-
-.islamic-card .gold-divider {
-  margin: 8px auto;
-  color: #f5d782;
-  font-size: 14px;
-  letter-spacing: 2px;
-  overflow-wrap: anywhere;
+.gold-divider {
+  margin: 16px 0;
+  font-size: 16px;
 }
 
-/* DATE, TIME, VENUE, CITY */
-
-.islamic-card .detail {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4px 10px;
+/* DETAILS */
+.details-panel {
   width: 100%;
-  max-width: 100%;
-  margin: 3px auto;
-  padding: 3px 5px;
-  border: 0;
-  border-radius: 4px;
-  background: #00281fce;
-  color: var(--cream);
-  text-align: center;
+  margin: 12px auto 20px;
+  padding: 8px 4px;
+  border-top: 1px solid rgba(216, 180, 92, 0.8);
+  border-bottom: 1px solid rgba(216, 180, 92, 0.8);
 }
 
-.islamic-card .detail span {
-  color: #f0d17a;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.islamic-card .detail strong {
-  color: #fff3ca;
-  font-size: clamp(13px, 3vw, 16px);
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin: 10px 0;
+  color: var(--light-gold);
+  font-size: 15px;
   line-height: 1.5;
+}
+
+.detail span {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.detail strong {
+  display: block;
+  max-width: 100%;
+  color: var(--light-gold);
+  font-size: 16px;
+  font-weight: normal;
   overflow-wrap: anywhere;
+  text-shadow: 0 1px 3px #00251c;
 }
 
 /* MESSAGE */
-
-.islamic-card .card-message {
-  width: 100%;
-  max-width: 100%;
-  margin: 8px auto;
-  padding: 7px 5px;
-  border-top: 1px solid #f2d37c;
-  border-bottom: 1px solid #f2d37c;
-  background: #00281fc9;
-  color: #fff0c4;
-  font: italic clamp(13px, 3.2vw, 17px)/1.4 Georgia, serif;
-  overflow-wrap: anywhere;
+.card-message {
+  margin: 22px 0 14px;
+  color: var(--light-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px #00251c;
 }
 
-/* BOTTOM DECORATION */
-
-.islamic-card .bottom-ornament {
-  margin: 7px auto 4px;
-  color: #f5d782;
-  font-size: 23px;
-  letter-spacing: 4px;
+/* PHOTO */
+.photo-area {
+  display: none;
+  margin: 20px auto 12px;
 }
 
-.islamic-card .dua {
-  max-width: 400px;
-  margin: 4px auto;
-  color: #ffedb0;
-  font: italic 13px/1.4 Georgia, serif;
+.photo-area.visible {
+  display: block;
 }
 
-/* TABLET */
+#showPhoto {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 5px solid var(--gold);
+  border-radius: 50%;
+  background: #f5e8dc;
+  box-shadow: 0 0 0 3px var(--cream);
+}
 
-@media screen and (max-width: 850px) {
+/* BOTTOM */
+.bottom-ornament {
+  margin: 12px 0;
+  font-size: 21px;
+}
+
+.dua {
+  margin: 14px 0 0;
+  color: var(--light-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.7;
+  text-shadow: 0 1px 3px #00251c;
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
   body {
-    padding: 12px;
-  }
-
-  .layout {
-    grid-template-columns: minmax(0, 600px);
-    gap: 22px;
-  }
-}
-
-/* MOBILE */
-
-@media screen and (max-width: 480px) {
-  body {
-    padding: 8px;
+    padding: 10px;
   }
 
   .topbar {
-    padding: 12px;
-  }
-
-  .topbar a {
-    font-size: 13px;
-  }
-
-  .topbar button {
-    padding: 9px 11px;
-    font-size: 12px;
+    justify-content: center;
   }
 
   .form-panel {
-    padding: 17px;
+    padding: 15px;
+  }
+
+  .form-panel h2 {
+    font-size: 23px;
+  }
+
+  .card-content {
+    padding: 30px 22px 26px;
   }
 
   .islamic-card {
-    border-width: 4px;
-    border-radius: 9px;
+    border-width: 6px;
+    border-radius: 20px;
   }
 
   .islamic-card::before {
-    inset: 7px;
+    inset: 11px;
   }
 
-  .islamic-card .card-content {
-    padding: 16px 6% 14px;
+  .bismillah {
+    font-size: 18px;
   }
 
-  .islamic-card .bismillah {
-    font-size: 16px;
-  }
-
-  .islamic-card .eyebrow {
-    letter-spacing: 1px;
-  }
-
-  .islamic-card #showBride,
-  .islamic-card #showGroom {
-    font-size: clamp(24px, 7vw, 34px);
-  }
-
-  .islamic-card .detail {
-    gap: 3px 7px;
-    margin: 3px auto;
-    padding: 4px 3px;
-  }
-
-  .islamic-card .detail span {
-    font-size: 9px;
-  }
-
-  .islamic-card .detail strong {
-    font-size: 13px;
-  }
-
-  .islamic-card .intro {
+  .intro {
     font-size: 12px;
   }
 
-  .islamic-card .card-message {
-    margin: 7px auto;
-    padding: 7px 4px;
-    font-size: 13px;
+  .detail strong {
+    font-size: 15px;
   }
 
-  .islamic-card .bottom-ornament {
-    margin: 7px auto 4px;
-    font-size: 20px;
-  }
-
-  .islamic-card .dua {
-    font-size: 11px;
+  .card-message {
+    font-size: 17px;
   }
 }
 
-/* PRINT / SAVE AS PDF */
-
+/* PRINT / PDF */
 @page {
   size: A4 portrait;
-  margin: 5mm;
+  margin: 8mm;
 }
 
 @media print {
-  html,
   body {
-    width: 100%;
-    min-height: 0;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: white !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    margin: 0;
+    padding: 0;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .topbar,
@@ -479,125 +401,361 @@ body {
     display: none !important;
   }
 
-  .layout,
+  .layout {
+    display: block;
+  }
+
   .preview-area {
-    display: block !important;
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: block;
+    width: 100%;
   }
 
   .islamic-card {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 auto !important;
-    border: 3px double var(--gold) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background-color: #003328 !important;
-    background-image:
-      linear-gradient(#00281f18, #00281f18),
-      url("./islamic-bg.png") !important;
-    background-position: center !important;
-    background-size: 100% 100% !important;
-    background-repeat: no-repeat !important;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    box-shadow: none;
     break-inside: avoid;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  .islamic-card .card-content {
-    padding: 12mm 7mm !important;
+  .card-content {
+    padding: 30px 24px;
+  }
+  /* COMPACT ISLAMIC CARD */
+.islamic-card {
+  max-width: 520px;
+}
+
+.card-content {
+  padding-top: 25px;
+  padding-bottom: 22px;
+}
+
+.moon {
+  font-size: 34px;
+  margin-bottom: 4px;
+}
+
+.bismillah {
+  margin: 5px 0 12px;
+}
+
+.eyebrow {
+  margin: 8px 0;
+}
+
+.card-heading {
+  margin: 7px 0 10px;
+}
+
+.intro {
+  margin: 8px 0 12px;
+  line-height: 1.6;
+}
+
+.couple-names {
+  margin: 10px 0;
+}
+
+.couple-names h1 {
+  margin: 8px 0;
+}
+
+.connector {
+  margin: 5px 0;
+}
+
+.gold-divider {
+  margin: 10px 0;
+}
+
+.details-panel {
+  margin: 8px auto 12px;
+  padding: 5px 4px;
+}
+
+.detail {
+  margin: 6px 0;
+  gap: 2px;
+}
+
+.card-message {
+  margin: 12px 0 8px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.bottom-ornament {
+  margin: 6px 0;
+}
+
+.dua {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .card-content {
+    padding: 25px 20px 20px;
+  }
+
+  .couple-names h1 {
+    font-size: 29px;
+  }
+
+  .detail strong {
+    font-size: 14px;
   }
 }
-/* FINAL CARD HEIGHT FIX */
 
-.islamic-card .card-content {
-  padding: 12px 6% 10px !important;
-}
+}@media screen and (max-width: 600px) {
+  body {
+    padding: 4px !important;
+  }
 
-.islamic-card .bismillah {
-  margin: 2px auto 5px !important;
-  padding: 2px 8px !important;
-  line-height: 1.5 !important;
-}
+  .layout {
+    gap: 10px !important;
+  }
 
-.islamic-card .eyebrow {
-  margin: 4px auto !important;
-}
+  .preview-area {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 
-.islamic-card .ornament {
-  margin: 2px auto !important;
-  font-size: 17px !important;
-}
+  .islamic-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 4px auto;
+    border-width: 4px;
+    border-radius: 14px;
+  }
 
-.islamic-card h2 {
-  margin: 5px auto !important;
-  line-height: 1.1 !important;
-}
+  .card-content {
+    padding: 12px 8px !important;
+  }
 
-.islamic-card .intro {
-  margin: 4px auto !important;
-  line-height: 1.3 !important;
-}
+  .islamic-card::before {
+    inset: 7px;
+  }
 
-.islamic-card #showBride,
-.islamic-card #showGroom {
-  margin: 4px auto !important;
-  line-height: 1.05 !important;
-  font-size: clamp(23px, 5.5vw, 36px) !important;
-}
+  .moon {
+    font-size: 26px;
+    margin-bottom: 2px;
+  }
 
-.islamic-card .connector {
-  margin: 2px auto !important;
-}
+  .bismillah {
+    margin: 3px 0 7px;
+    font-size: 14px;
+  }
 
-.islamic-card .gold-divider {
-  margin: 5px auto !important;
-}
+  .eyebrow {
+    margin: 5px 0;
+    font-size: 10px;
+  }
 
-.islamic-card .detail {
-  margin: 2px auto !important;
-  padding: 2px 4px !important;
-  line-height: 1.2 !important;
-}
+  .card-heading {
+    margin: 5px 0;
+    font-size: 23px;
+  }
 
-.islamic-card .card-message {
-  margin: 5px auto !important;
-  padding: 5px 4px !important;
-  line-height: 1.3 !important;
-}
+  .intro {
+    margin: 5px 0 8px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
 
-.islamic-card .bottom-ornament {
-  margin: 4px auto 2px !important;
-  font-size: 18px !important;
-}
+  .couple-names {
+    margin: 6px 0;
+  }
 
-.islamic-card .dua {
-  margin: 2px auto !important;
-  line-height: 1.25 !important;
-  font-size: 11px !important;
-}
+  .couple-names h1 {
+    margin: 5px 0;
+    font-size: 24px;
+  }
 
-@media screen and (max-width: 480px) {
-  .islamic-card .card-content {
-    padding: 10px 5% 8px !important;
+  .connector {
+    margin: 3px 0;
+    font-size: 20px;
+  }
+
+  .gold-divider {
+    margin: 5px 0;
+  }
+
+  .details-panel {
+    margin: 5px auto;
+    padding: 3px;
+  }
+
+  .detail {
+    margin: 4px 0;
+    gap: 1px;
+  }
+
+  .detail span {
+    font-size: 9px;
+  }
+
+  .detail strong {
+    font-size: 12px;
+  }
+
+  .card-message {
+    margin: 7px 0 4px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  #showPhoto {
+    width: 75px;
+    height: 75px;
+  }
+
+  .bottom-ornament {
+    margin: 3px 0;
+    font-size: 15px;
+  }
+
+  .dua {
+    margin-top: 4px;
+    font-size: 10px;
   }
 }
+/* MOBILE VIEW FIX — ISLAMIC CARD ONLY */
 
-/* NIKAH TEXT — ROYAL GOLD HIGHLIGHT */
+@media screen and (max-width: 600px) {
+  .preview-area {
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+  }
 
-.islamic-card p.connector {
-  color: #D8B45C !important;
-  font-family: Georgia, serif !important;
-  font-size: 27px !important;
-  font-weight: bold !important;
-  font-style: italic !important;
-  letter-spacing: 3px !important;
-  text-shadow:
-    0 0 4px #FFE7A0,
-    0 0 10px #D8B45C,
-    0 2px 4px #001A12 !important;
-  margin: 5px auto !important;
+  .islamic-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 10px auto;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-content {
+    padding: 28px 20px 24px;
+  }
+
+  .moon {
+    font-size: 34px;
+  }
+
+  .bismillah {
+    font-size: 17px;
+  }
+
+  .card-heading {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .couple-names h1 {
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .connector {
+    font-size: 25px;
+  }
+
+  .details-panel {
+    margin: 10px auto;
+  }
+
+  .detail {
+    margin: 7px 0;
+  }
+
+  .detail strong {
+    font-size: 14px;
+  }
+
+  .card-message {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .dua {
+    font-size: 12px;
+  }
 }
+@media screen and (max-width: 600px) {
+  body {
+    padding: 5px !important;
+  }
+
+  .layout {
+    gap: 5px !important;
+  }
+
+  .preview-area {
+    padding: 5px !important;
+    margin: 0 !important;
+  }
+
+  .islamic-card {
+    margin: 5px auto !important;
+  }
+
+  .card-content {
+    padding: 5px !important;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 !important;
+  }
+
+  .layout {
+    gap: 0 !important;
+  }
+
+  .preview-area {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .islamic-card {
+    margin: 0 auto !important;
+  }
+
+  .card-content {
+    padding: 5px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 !important;
+  }
+
+  .layout {
+    gap: 0 !important;
+  }
+
+  .preview-area {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .islamic-card {
+    margin: 0 auto !important;
+  }
+
+  .card-content {
+    padding: 4px !important;
+  }
+     }
