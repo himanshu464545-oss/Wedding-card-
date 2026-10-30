@@ -1,75 +1,24 @@
+photoInput.addEventListener("change", function () {
+  const file = photoInput.files[0];
 
-const fields = {
-  bride: document.getElementById("bride"),
-  groom: document.getElementById("groom"),
-  date: document.getElementById("date"),
-  time: document.getElementById("time"),
-  venue: document.getElementById("venue"),
-  city: document.getElementById("city"),
-  message: document.getElementById("message")
-};
-
-const output = {
-  bride: document.getElementById("showBride"),
-  groom: document.getElementById("showGroom"),
-  date: document.getElementById("showDate"),
-  time: document.getElementById("showTime"),
-  venue: document.getElementById("showVenue"),
-  city: document.getElementById("showCity"),
-  message: document.getElementById("showMessage")
-};
-
-function updateInvitation() {
-  output.bride.textContent =
-    fields.bride.value.trim() || "Bride's Name";
-
-  output.groom.textContent =
-    fields.groom.value.trim() || "Groom's Name";
-
-  if (fields.date.value) {
-    const date = new Date(fields.date.value + "T00:00:00");
-
-    output.date.textContent = date.toLocaleDateString("en-IN", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    });
-  } else {
-    output.date.textContent = "Nikah Date";
+  if (!file) {
+    showPhoto.removeAttribute("src");
+    photoArea.classList.remove("visible");
+    return;
   }
 
-  if (fields.time.value) {
-    const [hours, minutes] = fields.time.value.split(":");
-    let hour = Number(hours);
-    const period = hour >= 12 ? "PM" : "AM";
-    hour = hour % 12 || 12;
-
-    output.time.textContent = `${hour}:${minutes} ${period}`;
-  } else {
-    output.time.textContent = "Nikah Time";
+  if (!file.type.startsWith("image/")) {
+    alert("Please select an image file.");
+    photoInput.value = "";
+    return;
   }
 
-  output.venue.textContent =
-    fields.venue.value.trim() || "Wedding Venue";
+  const reader = new FileReader();
 
-  output.city.textContent =
-    fields.city.value.trim() || "City";
+  reader.onload = function (event) {
+    showPhoto.src = event.target.result;
+    photoArea.classList.add("visible");
+  };
 
-  output.message.textContent =
-    fields.message.value.trim() ||
-    "Together with our families, we invite you to join us in celebrating our Nikah.";
-}
-
-document.getElementById("updateBtn").addEventListener(
-  "click",
-  function () {
-    updateInvitation();
-    document.querySelector(".preview-area").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }
-);
-
-// Initial placeholder values
-updateInvitation();
+  reader.readAsDataURL(file);
+});
